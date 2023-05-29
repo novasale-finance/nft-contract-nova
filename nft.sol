@@ -155,8 +155,8 @@ contract autostakingSecondary is Context, AccessControlEnumerable, ERC721Enumera
   bool public isAutostaking = true;
   address WETH;
   address deadAddress = 0x000000000000000000000000000000000000dEaD;
-  address public artistFeeReciever = 0x08f5bCD7421Fc071E7A916Ed77003B1cf78F6fAa;
-  address public devFeeReciever = 0x3A0Cb1D6B195Ea497B060Cc99A292E37E5D27529;
+  address public artistFeeReciever = 0xEe26aE0304e3D87BDb75Bd2a4ae503f06d795f34;
+  address public devFeeReciever = 0xEe26aE0304e3D87BDb75Bd2a4ae503f06d795f34;
   address public marketingReciever;
   
   buyableTokens[] public tokensToBuy;
@@ -178,7 +178,7 @@ contract autostakingSecondary is Context, AccessControlEnumerable, ERC721Enumera
       _tokenPrice = mintPrice;
       maxSupply = max;
       _admin = admin;
-      router = IDEXRouter(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D); //Mainnet
+      router = IDEXRouter(0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506); //Mainnet
       _setupRole(DEFAULT_ADMIN_ROLE, admin);
       _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
       WETH = address(router.WETH());
